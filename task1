@@ -1,0 +1,239 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace basic
+{
+    class Program
+    {
+        public int a = 10;
+        public float b = 1.23F;
+        public double c = 1.23;
+        public string d = "ritesh";
+        public bool e = true;
+        public int f = 20;
+        
+
+       public int sum()
+       {
+           int add;
+           add = a + f;
+           return add;
+           
+       }
+
+        public double product()
+        {
+            double mul;
+            mul = c * c;
+            return mul;
+        }
+
+        static void Main(string[] args)
+        {
+            Program s1 = new Program();
+            Console.WriteLine(s1.sum());
+
+            Program p1 = new Program();
+            Console.WriteLine(p1.product());
+        }
+    }
+}
+
+
+
+//Switch Program
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace swtch
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string user = Console.ReadLine();
+            switch(user)
+            {
+                case "yes":
+                    Console.WriteLine("print yes");
+                    break;
+                case "no":
+                    Console.WriteLine("print no");
+                    break;
+                default:
+                    Console.WriteLine("Invalid");
+                    break;
+            }
+        }
+
+    }
+}
+
+
+//if statement program
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ifprgm
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int i = 0;
+            if (n == 1)
+            {
+            Console.WriteLine("you are first");
+            }
+            else
+            {
+            Console.WriteLine("you are not first");
+            }
+        }
+    }
+}
+
+
+//for program
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace forprgm
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int i = 0;
+            for(i=0; i<=n; i++)
+            {
+                Console.WriteLine(i); //prints n numbers
+            }
+        }
+    }
+}
+
+//ternary program
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ternaryoperation
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i=-5;
+            string answer;
+
+            answer = (i >= 0) ? "positive" : "negative";
+            Console.WriteLine(answer);
+
+        }
+    }
+}
+
+
+
+//Inheritance Program
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace inheritanceprogram
+{
+   public class person
+    {
+       public string PersonName;
+       public string email;
+       public int Id;
+       public void view()
+       {
+           Console.WriteLine(PersonName + "Id is" + Id);
+       }
+       public class teacher : person
+       {
+           public float teacherincome;
+       }
+       public class student : person
+       {
+           public float studentfees;
+       }
+
+
+
+        static void Main(string[] args)
+        {
+            teacher t1 = new teacher();
+            t1.PersonName = "rit";
+            t1.Id = 100;
+            t1.teacherincome = 20000;
+
+            student s1 = new student();
+            s1.studentfees = 1000;
+            s1.Id = 200;
+            s1.PersonName = "cha";
+            Console.WriteLine(t1.PersonName + "Id is" + t1.Id);
+            Console.WriteLine(s1.PersonName + "Id is" + s1.Id);
+
+           
+
+
+        }
+    }
+}
+
+
+//enum program
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace enumprg
+{
+    class Program
+    {
+        enum seasons { spring, summer, fall};
+
+        static void Main(string[] args)
+        { 
+          
+        int longseason= (int) seasons.spring;
+        int smallseason= (int) seasons.summer;
+        Console.WriteLine(longseason + "  " + smallseason);
+
+        }
+    }
+}
+
+
+
+       
